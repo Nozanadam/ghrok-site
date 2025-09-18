@@ -48,7 +48,7 @@ ${formData.message}`;
     const encodedMessage = encodeURIComponent(message);
     
     // WhatsApp URL
-    const whatsappUrl = `https://wa.me/553193288605?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/55998888752?text=${encodedMessage}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');

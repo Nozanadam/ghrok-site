@@ -47,7 +47,7 @@ Gostaria de ver na prática como as soluções podem ser aplicadas ao meu negóc
     const encodedMessage = encodeURIComponent(message);
     
     // WhatsApp URL
-    const whatsappUrl = `https://wa.me/5531932886055?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/55998888752?text=${encodedMessage}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
