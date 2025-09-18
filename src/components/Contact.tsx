@@ -35,18 +35,14 @@ const Contact: React.FC = () => {
     e.preventDefault();
     
     // Format message for WhatsApp
-    const message = `*Nova mensagem do site GORK TECNOLOGIA*
+    const message = `Olá, gostaria de obter mais informações sobre ${getServiceLabel(formData.service)} oferecidas pela GORK TECNOLOGIA.
 
-*Nome:* ${formData.name}
-*Email:* ${formData.email}
-*Telefone:* ${formData.phone}
-*Serviço de Interesse:* ${getServiceLabel(formData.service)}
+Nome: ${formData.name}
+E-mail: ${formData.email}
+Telefone: ${formData.phone}
+Serviço de interesse: ${getServiceLabel(formData.service)}
 
-*Mensagem:*
-${formData.message}
-
----
-Enviado através do site gorktecnologia.com.br`;
+${formData.message}`;
 
     // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
@@ -69,17 +65,17 @@ Enviado através do site gorktecnologia.com.br`;
 
   const getServiceLabel = (value: string) => {
     const serviceLabels: { [key: string]: string } = {
-      'automation': 'Automação com n8n',
-      'landing-page': 'Landing Page',
-      'ai-integration': 'Integração com IA',
-      'cloud': 'Soluções Cloud',
-      'website': 'Site Institucional',
-      'crm-erp': 'CRM/ERP',
-      'mobile-app': 'Aplicativo Android',
-      'gcp-services': 'Serviços Google Cloud',
-      'other': 'Outro'
+      'automation': 'as soluções em Automação com n8n',
+      'landing-page': 'as soluções em Landing Pages',
+      'ai-integration': 'as soluções em Integração com IA',
+      'cloud': 'as soluções em Cloud',
+      'website': 'as soluções em Sites Institucionais',
+      'crm-erp': 'as soluções em CRM/ERP',
+      'mobile-app': 'as soluções em Aplicativos Android',
+      'gcp-services': 'as soluções em Google Cloud',
+      'other': 'outras soluções'
     };
-    return serviceLabels[value] || value;
+    return serviceLabels[value] || 'as soluções';
   };
 
   return (
