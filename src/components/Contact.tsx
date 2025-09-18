@@ -52,7 +52,7 @@ Enviado através do site gorktecnologia.com.br`;
     const encodedMessage = encodeURIComponent(message);
     
     // WhatsApp URL
-    const whatsappUrl = `https://wa.me/5531932886055?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/553193288605?text=${encodedMessage}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
