@@ -33,24 +33,21 @@ const CTASection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Format message for WhatsApp
-    const message = `*Agendamento de Demonstração - GORK TECNOLOGIA*
+    // Format message for WhatsApp in the same style as contact form
+    const message = `Olá, gostaria de agendar uma demonstração gratuita das soluções oferecidas pela GORK TECNOLOGIA.
 
-*Nome:* ${formData.name}
-*Email:* ${formData.email}
-*Telefone:* ${formData.phone}
-*Horário Disponível:* ${getTimeLabel(formData.availableTime)}
+Nome: ${formData.name}
+E-mail: ${formData.email}
+Telefone: ${formData.phone}
+Horário disponível: ${getTimeLabel(formData.availableTime)}
 
-*Solicitação:* Demonstração gratuita e personalizada
-
----
-Enviado através do site gorktecnologia.com.br`;
+Gostaria de ver na prática como as soluções podem ser aplicadas ao meu negócio.`;
 
     // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
     
     // WhatsApp URL
-    const whatsappUrl = `https://wa.me/553193288605?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/5531932886055?text=${encodedMessage}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
