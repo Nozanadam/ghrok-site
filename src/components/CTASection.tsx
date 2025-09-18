@@ -32,20 +32,48 @@ const CTASection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
+    // Format message for WhatsApp
+    const message = `*Agendamento de Demonstração - GORK TECNOLOGIA*
+
+*Nome:* ${formData.name}
+*Email:* ${formData.email}
+*Telefone:* ${formData.phone}
+*Horário Disponível:* ${getTimeLabel(formData.availableTime)}
+
+*Solicitação:* Demonstração gratuita e personalizada
+
+---
+Enviado através do site gorktecnologia.com.br`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // WhatsApp URL
+    const whatsappUrl = `https://wa.me/5531932886055?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
+    setFormSubmitted(true);
+    setFormData(initialFormData);
+    
+    // Reset success message and close form after delay
     setTimeout(() => {
-      setIsSubmitting(false);
-      setFormSubmitted(true);
-      setFormData(initialFormData);
-      
-      // Reset success message and close form after delay
-      setTimeout(() => {
-        setFormSubmitted(false);
-        setShowForm(false);
-      }, 3000);
-    }, 1500);
+      setFormSubmitted(false);
+      setShowForm(false);
+    }, 3000);
+  };
+
+  const getTimeLabel = (value: string) => {
+    const timeLabels: { [key: string]: string } = {
+      'manha': 'Manhã (09:00 - 12:00)',
+      'tarde': 'Tarde (13:00 - 17:00)',
+      'noite': 'Noite (18:00 - 20:00)',
+      'flexivel': 'Horário flexível'
+    };
+    return timeLabels[value] || value;
   };
 
   const openForm = () => {

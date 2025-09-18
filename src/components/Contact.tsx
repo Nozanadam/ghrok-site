@@ -33,19 +33,53 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
+    // Format message for WhatsApp
+    const message = `*Nova mensagem do site GORK TECNOLOGIA*
+
+*Nome:* ${formData.name}
+*Email:* ${formData.email}
+*Telefone:* ${formData.phone}
+*Serviço de Interesse:* ${getServiceLabel(formData.service)}
+
+*Mensagem:*
+${formData.message}
+
+---
+Enviado através do site gorktecnologia.com.br`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // WhatsApp URL
+    const whatsappUrl = `https://wa.me/5531932886055?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
+    setFormSubmitted(true);
+    setFormData(initialFormData);
+    
+    // Reset success message after a delay
     setTimeout(() => {
-      setIsSubmitting(false);
-      setFormSubmitted(true);
-      setFormData(initialFormData);
-      
-      // Reset success message after a delay
-      setTimeout(() => {
-        setFormSubmitted(false);
-      }, 5000);
-    }, 1500);
+      setFormSubmitted(false);
+    }, 5000);
+  };
+
+  const getServiceLabel = (value: string) => {
+    const serviceLabels: { [key: string]: string } = {
+      'automation': 'Automação com n8n',
+      'landing-page': 'Landing Page',
+      'ai-integration': 'Integração com IA',
+      'cloud': 'Soluções Cloud',
+      'website': 'Site Institucional',
+      'crm-erp': 'CRM/ERP',
+      'mobile-app': 'Aplicativo Android',
+      'gcp-services': 'Serviços Google Cloud',
+      'other': 'Outro'
+    };
+    return serviceLabels[value] || value;
   };
 
   return (
@@ -211,6 +245,8 @@ const Contact: React.FC = () => {
                     <option value="cloud">Soluções Cloud</option>
                     <option value="website">Site Institucional</option>
                     <option value="crm-erp">CRM/ERP</option>
+                    <option value="mobile-app">Aplicativo Android</option>
+                    <option value="gcp-services">Serviços Google Cloud</option>
                     <option value="other">Outro</option>
                   </select>
                 </div>
