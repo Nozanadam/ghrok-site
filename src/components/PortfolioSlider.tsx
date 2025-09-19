@@ -29,6 +29,20 @@ const portfolioItems: PortfolioItem[] = [
     description: 'Design responsivo e estratégico para maximizar conversões e engajamento.',
     image: '/src/assets/LP3.jpg',
     tags: ['Landing Page', 'Responsivo', 'Engajamento']
+  },
+  {
+    id: 'lp4',
+    title: 'Landing Page Profissional 4',
+    description: 'Solução completa com integração de sistemas e automações avançadas.',
+    image: '/src/assets/LP4.jpg',
+    tags: ['Landing Page', 'Integração', 'Automação']
+  },
+  {
+    id: 'lp5',
+    title: 'Landing Page Profissional 5',
+    description: 'Interface moderna com foco em experiência do usuário e performance.',
+    image: '/src/assets/LP5.jpg',
+    tags: ['Landing Page', 'UX/UI', 'Performance']
   }
 ];
 
