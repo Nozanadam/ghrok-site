@@ -13,35 +13,35 @@ const portfolioItems: PortfolioItem[] = [
     id: 'lp1',
     title: 'Landing Page Profissional 1',
     description: 'Landing page de alta conversão com design moderno e otimizado para resultados.',
-    image: '/src/assets/LP1.jpg',
+    image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['Landing Page', 'Conversão', 'Design Moderno']
   },
   {
     id: 'lp2',
     title: 'Landing Page Profissional 2',
     description: 'Página de vendas otimizada com foco em captação de leads qualificados.',
-    image: '/src/assets/LP2.jpg',
+    image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['Landing Page', 'Vendas', 'Lead Generation']
   },
   {
     id: 'lp3',
     title: 'Landing Page Profissional 3',
     description: 'Design responsivo e estratégico para maximizar conversões e engajamento.',
-    image: '/src/assets/LP3.jpg',
+    image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['Landing Page', 'Responsivo', 'Engajamento']
   },
   {
     id: 'lp4',
     title: 'Landing Page Profissional 4',
     description: 'Solução completa com integração de sistemas e automações avançadas.',
-    image: '/src/assets/LP4.jpg',
+    image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['Landing Page', 'Integração', 'Automação']
   },
   {
     id: 'lp5',
     title: 'Landing Page Profissional 5',
     description: 'Interface moderna com foco em experiência do usuário e performance.',
-    image: '/src/assets/LP5.jpg',
+    image: 'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['Landing Page', 'UX/UI', 'Performance']
   }
 ];
