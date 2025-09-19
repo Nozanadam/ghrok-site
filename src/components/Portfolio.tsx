@@ -9,10 +9,10 @@ const Portfolio: React.FC = () => {
       <div className="space-y-16">
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Nosso <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">Portfólio</span>
+            Projetos de <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">Alta Performance</span>
           </h2>
           <p className="text-gray-300 text-lg">
-            Conheça alguns dos nossos projetos recentes e veja como ajudamos empresas a alcançarem seus objetivos.
+            Cada projeto é estrategicamente desenvolvido para <strong className="text-white">maximizar sua receita</strong> e acelerar o crescimento do seu negócio. Utilizamos tecnologia de ponta, design persuasivo e automações inteligentes para transformar visitantes em clientes e processos manuais em máquinas de vendas automatizadas.
           </p>
         </div>
         
