@@ -1,7 +1,6 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Github, MessageCircle } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 import { Link } from './ui/Link';
-import { Button } from './ui/Button';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +14,7 @@ const Footer: React.FC = () => {
       </div>
       
       <div className="relative z-10 container mx-auto px-4 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="space-y-6">
             <div className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 text-transparent bg-clip-text">
               GORK TECNOLOGIA
@@ -111,33 +110,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          <div className="space-y-6">
-            <h3 className="text-white font-semibold mb-6">Newsletter</h3>
-            <p className="text-gray-400">
-              Inscreva-se para receber nossas atualizações, dicas e novidades.
-            </p>
-            
-            <div className="flex flex-col space-y-2">
-              <input
-                type="email"
-                placeholder="Seu e-mail"
-                className="w-full px-4 py-2.5 bg-blue-900/50 border border-blue-800/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500/50"
-              />
-              <Button variant="primary" className="w-full">
-                Inscrever-se
-              </Button>
-            </div>
-            
-            <div className="flex items-center space-x-3 mt-6">
-              <div className="w-10 h-10 rounded-full bg-teal-900/50 flex items-center justify-center text-teal-400">
-                <MessageCircle size={20} />
-              </div>
-              <div>
-                <p className="text-sm text-gray-400">Precisa de ajuda?</p>
-                <p className="text-white">contato@gorktecnologia.com.br</p>
-              </div>
-            </div>
-          </div>
         </div>
         
         <div className="border-t border-blue-900/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
