@@ -206,7 +206,12 @@ const Services: React.FC = () => {
               </ul>
               
               <div className="flex space-x-4">
-                <Button href="#contact" icon={<ArrowUpRight size={16} />} iconPosition="right">
+                <Button 
+                  href="#contact" 
+                  icon={<ArrowUpRight size={16} />} 
+                  iconPosition="right"
+                  onClick={() => setSelectedService(null)}
+                >
                   Solicitar Proposta
                 </Button>
                 <Button 
