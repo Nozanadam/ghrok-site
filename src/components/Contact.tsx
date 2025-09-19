@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Section } from './ui/Section';
 import { Button } from './ui/Button';
-import { Send, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
+import { Send } from 'lucide-react';
 
 type FormData = {
   name: string;
@@ -96,73 +96,7 @@ ${formData.message}`;
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <div className="bg-blue-800/30 border border-blue-700/30 rounded-xl p-6 backdrop-blur-sm">
-              <h3 className="text-xl font-semibold text-white mb-4">Informações de Contato</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-teal-900/50 flex items-center justify-center mr-4">
-                    <Phone className="w-5 h-5 text-teal-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">Telefone</p>
-                    <p className="text-white">(11) 9xxxx-xxxx</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-blue-900/50 flex items-center justify-center mr-4">
-                    <Mail className="w-5 h-5 text-blue-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-white">contato@gorktecnologia.com.br</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center mr-4">
-                    <MapPin className="w-5 h-5 text-purple-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">Endereço</p>
-                    <p className="text-white">São Paulo, SP - Brasil</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-green-900/50 flex items-center justify-center mr-4">
-                    <MessageSquare className="w-5 h-5 text-green-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">WhatsApp</p>
-                    <p className="text-white">(11) 9xxxx-xxxx</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-blue-800/30 border border-blue-700/30 rounded-xl p-6 backdrop-blur-sm">
-              <h3 className="text-xl font-semibold text-white mb-4">Horário de Atendimento</h3>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <p className="text-gray-300">Segunda - Sexta</p>
-                  <p className="text-white">09:00 - 18:00</p>
-                </div>
-                <div className="flex justify-between">
-                  <p className="text-gray-300">Sábado</p>
-                  <p className="text-white">09:00 - 13:00</p>
-                </div>
-                <div className="flex justify-between">
-                  <p className="text-gray-300">Domingo</p>
-                  <p className="text-white">Fechado</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+        <div className="max-w-2xl mx-auto">
           <div className="bg-blue-800/30 border border-blue-700/30 rounded-xl p-6 backdrop-blur-sm">
             <h3 className="text-xl font-semibold text-white mb-6">Envie sua Mensagem</h3>
             
